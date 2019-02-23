@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row" style="margin-top: 20px;">
+      <div class="col-md-12">
+        <h3>List of vehicles</h3>
+        <hr>
+      </div>
+
+    </div>
+    {% if cars %}
+      <table class="table table-responsive">
+        {% for car in cars %}
+          <tbody>
+            <tr>
+              <td>Make:</td>
+              <td><input type="text" name="" value="{{ car.make }}" readonly></td>
+              <td>Model:</td>
+              <td colspan="3"><input type="text" name="" value="{{ car.model }}" readonly></td>
+            </tr>
+            <tr>
+              <td>Description:</td>
+              <td colspan="5"><input type="text" name="" value="{{ car.description }}" readonly></td>
+            </tr>
+            <tr>
+              <td>Color:</td>
+              <td><input type="text" name="" value="{{ car.color }}" readonly></td>
+              <td>Doors:</td>
+              <td><input type="text" name="" value="{{ car.doors }}" readonly></td>
+              <td>Lot number:</td>
+              <td><input type="text" name="" value="{{ car.lot_number }}" readonly></td>
+            </tr>
+            <tr>
+              <td colspan="6">&nbsp;</td>
+            </tr>
+          </tbody>
+        {% endfor %}
+      </table>
+
+    {% else %}
+      No records were found.
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,15 @@
+>django-admin startproject Dealership
+>python manage.py startapp vehicle_inventory
+>python manage.py makemigration vehicle_inventory
+>python manage.py migrate
+>python manage.py createsuperuser
+>pip install django-auth-ldap
+>pip install djangorestframework
+>pip install markdown
+>pip install django-filter
+>python manage.py runserver
+
+
+
+user: test_user
+pass: test2019
