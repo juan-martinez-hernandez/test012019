@@ -20,7 +20,7 @@ from vehicle_inventory import views
 
 router = routers.DefaultRouter()
 router.register(r'vehicles', views.VehicleViewSet)
-#router.register(r'v1/portal/vehicles/$', views.VehicleViewSet)
+router.register(r'v1/portal/vehicles', views.VehicleViewSet)
 #/v1/portal/vehicles
 
 urlpatterns = [

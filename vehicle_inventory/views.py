@@ -5,12 +5,11 @@ from django.shortcuts import render
 
 from .models import vehicle
 from rest_framework import viewsets
-from serializers import VehicleSerializer
+from .serializers import VehicleSerializer
 
 # Create your views here.
 def index(request):
     cars = vehicle.objects.all()
-    print(cars)
     return render(request, 'index.html', locals())
 
 class VehicleViewSet(viewsets.ModelViewSet):
